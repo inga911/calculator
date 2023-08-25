@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.928);
+}
+
+.calculator {
+    width: 35vw;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 0.5%;
+}
+
+.calculator>button {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(52, 52, 52, 0.98);
+    transition: all 0.15s;
+}
+
+.calculator>button:hover {
+    scale: 1.05;
+    box-shadow: 0 1px 2px white;
+}
+
+.calculator>.ac {
+    background-color: rgba(254, 198, 95, 0.856);
+}
+
+.calculator>.ac:hover {
+    background-color: rgb(248, 179, 52);
+}
+
+.calculator>.del {
+    background-color: rgba(254, 103, 95, 0.856);
+}
+
+.calculator>.del:hover {
+    background-color: rgba(252, 62, 52, 0.957);
+}
+
+.calculator>button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.697);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator>[data-operation] {
+    background-color: rgba(152, 214, 247, 0.373);
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(179, 174, 174, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current {
+    color: white;
+    font-size: 2.5rem;
+}
